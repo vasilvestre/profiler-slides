@@ -40,6 +40,20 @@ src: ./pages/presentations.md
 ---
 
 ---
+layout: center
+title: La petite histoire
+level: 1
+---
+
+# La petite histoire
+
+<!-- Depuis quelques clients, j'ai eu l'occasion d'utiliser Sentry et donc d'installer et tester un maximum de feature !
+J'ai trouvé le produit très intéressant, il dispose d'énormément de fonctionnalitée. 
+J'ai ensuite du faire un audit client, j'ai donc mis en place xdebug et excimer afin d'identifier les ralentissements sur le site puisqu'ils n'avaient plus de license blackfire par manque d'usage. 
+Plusieurs conclusions me sont venues et l'envie de creuser le sujet des profilers. Me voila donc ici pour vous en parler !
+-->
+
+---
 layout: quote
 title: La définition
 level: 1
@@ -147,6 +161,7 @@ hideInToc: true
 
 <!--
 La vue à gauche permet de visualiser de l’appel de la fonction, la classe ou le fichier et le temps passé au total (self) dans les lignes de cette fonction sans compter les appels à d’autres fonctions. 
+Elle permet aussi de consulter les cycles d'appels, donc si une boucle se fait 3 fois, on est en capacité de savoir quel cycle est le + lent et identifier quelle boucle est plus lente.
 La visualisation à droite est une vue qui s’appelle une Callee map, une vue très visuelle mais qui devient vite brouillon selon moi, (je ne juge personne).
 Une autre vue disponible est très appréciée est le Call graph.
 -->
