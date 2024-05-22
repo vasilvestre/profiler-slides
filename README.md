@@ -1,15 +1,15 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Bienvenue dans mes slides sur les profilers en PHP donné à l'Afup day Lille 2024.
 
-To start the slide show:
+## Documentation utilisée
+
+https://www.notion.so/L-tat-des-profiler-PHP-en-2024-f32d2eefdd1c45ccbc0af5dcfb43becf
+
+## Comment lancer les slides ?
 
 - `npm install`
 - `npm run dev`
 - visit http://localhost:3030
 
-Edit the [slides.md](./slides.md) to see the changes.
+## Technologie utilisée
 
-Change base url argument here : https://github.com/vasilvestre/slidev-base/blob/main/.github/workflows/static.yml#L41
-
-![image](https://github.com/vasilvestre/slidev-base/assets/17164385/aeb39f67-f071-48e9-8dec-0c293e9d31f7)
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+- Pour les slides [Slidev](https://github.com/slidevjs/slidev)!
