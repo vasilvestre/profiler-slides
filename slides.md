@@ -553,6 +553,21 @@ C’est un sujet à suivre et un avenir qui se profile .. bien.
 -->
 
 ---
+layout: two-cols-header
+hideInToc: true
+---
+
+# Pour faire des retours sur les slides
+
+<img src="/qrcode_profiler_feedback.png">
+
+::right::
+
+# Pour retrouver la conf
+
+<img src="/qrcode_profiler_slides.png">
+
+---
 layout: end
 hideInToc: true
 ---
