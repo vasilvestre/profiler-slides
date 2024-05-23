@@ -314,7 +314,7 @@ hideInToc: true
 # L'argent & | l'administratif..
 
 <v-click>
-<img width="300px" src="/cto.jpeg">
+<img width="300px" src="/cto.jpg">
 </v-click>
 
 <!--
