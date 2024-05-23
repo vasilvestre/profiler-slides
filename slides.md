@@ -54,12 +54,14 @@ Plusieurs conclusions me sont venues et l'envie de creuser le sujet des profiler
 -->
 
 ---
-layout: quote
+layout: section
 title: La définition
 level: 1
 ---
 
-# Le _profilage de code_
+# La définition
+
+## Le _profilage de code_
 
 <!-- Le profilage de code permet de contrôler lors de l'exécution d'un logiciel : la liste des fonctions appelées et le temps passé dans chacune d'elles ; l'utilisation processeur ; l'utilisation mémoire.  - Wikipedia -->
 
@@ -68,13 +70,10 @@ layout: quote
 hideInToc: true
 ---
 
-# La définition
-
-<!-- Getting started with profiling can be intimidating, especially because the term “profiler” is used to refer to so many specific types of tools. - Sentry -->
-
+>  Getting started with profiling can be intimidating, especially because the term “profiler” is used to refer to so many specific types of tools. - Sentry
 
 <!--
-Pour sa définition, je souhaite préciser avant tout de quoi on parle.
+Je souhaite préciser de quoi on ne parle pas.
 
 "Se lancer dans le profilage peut être intimidant, surtout parce que le terme « profilage » est utilisé pour désigner tant de types spécifiques d'outils." - Sentry
 
@@ -91,7 +90,7 @@ hideInToc: true
 <!-- Donc pas ça ! -->
 
 ---
-layout: center
+layout: section
 hideInToc: true
 ---
 
@@ -116,7 +115,10 @@ level: 2
 # Fonctionnement
 
 <!--
-Une grande différence au sein de ces outils est leur fonctionnement. Il existe deux grands fonctionnements, par instrumentation (Deterministic) et par échantillonage (Sampling).
+
+Maintenant je vais vous parler du fonctionnement de ces profilers, pas de stress c’est très simple.
+
+Une grande différence au sein de ces outils est leur fonctionnement. Il existe deux grands fonctionnements dont je vais vous parler aujourd'hui, par instrumentation (Deterministic) et par échantillonage (Sampling).
 -->
 
 ---
@@ -141,15 +143,6 @@ On voit que l’échantillonage est ici de 10ms ce qui permet de voir A, C et D.
 Si vous n'avez pas tous compris, un autre schéma est disponible juste à côté -->
 
 ---
-layout: center
-hideInToc: true
----
-
-<img src="/catshock.gif" />
-
-<!-- *pause eau* -->
-
----
 layout: section
 hideInToc: true
 ---
@@ -172,6 +165,11 @@ hideInToc: true
 La vue à gauche permet de visualiser de l’appel de la fonction, la classe ou le fichier et le temps passé au total (self) dans les lignes de cette fonction sans compter les appels à d’autres fonctions. 
 Elle permet aussi de consulter les cycles d'appels, donc si une boucle se fait 3 fois, on est en capacité de savoir quel cycle est le + lent et identifier quelle boucle est plus lente.
 La visualisation à droite est une vue qui s’appelle une Callee map, une vue très visuelle mais qui devient vite brouillon selon moi, (je ne juge personne).
+
+Je vous laisse un peu apprécier 
+
+*pause eau*
+
 Une autre vue disponible est très appréciée est le Call graph.
 -->
 
@@ -263,8 +261,6 @@ hideInToc: true
 Pour vous partager un petit chiffre cool, voici une stat de wikipedia :
 
 En décembre 2022, les serveurs de Wikipedia reçoivent environ 1,6 milliard de requêtes par jour soit 20 000 par secondes. Avec une période de sampling de 60 secondes, ils collectent 3 millions de trace d'appels par jour. Ce qui donne 1 trace obtenu de 0,2% des requêtes et 0 trace des autres 99,8%.
-
-Maintenant je vais vous parler du fonctionnement de ces profilers, pas de stress c’est très simple.
 -->
 
 ---
@@ -497,6 +493,10 @@ url: https://svgur.com/i/169a.svg
 hideInToc: true
 ---
 
+<!--
+Je vous ai déjà montré ce graph au tout début
+-->
+
 ---
 layout: default
 title: Visualisation de XHProf
@@ -524,9 +524,12 @@ level: 1
 | Env  | Pas de profiling | Excimer         | Xhprof           | Xdebug            |
 |------|------------------|-----------------|------------------|-------------------|
 | Dev  | ~1,76sec         | ~1,78sec (1.1%) | ~2,77sec (57.4%) | ~5,55sec (215.3%) |
-| Prod | ~665ms           | ~680ms (2.3%)   | ~1200ms (80.5%)  | ~2200ms (230.8%)  |
+| Prod | ~665ms           | ~670ms (0.98%)  | ~1200ms (80.5%)  | ~2200ms (230.8%)  |
 
-<!-- Sur mon projet de test, j’ai pu mesurer ces performances ci sur la même requête. J’utilise en environnement de dev et prod sur ma machine locale. La route appelée s’occupe d’envoyer 100000 objets dans une base de données sqlite. 
+<!--
+Sur mon projet de test, j’ai pu mesurer ces performances ci sur la même requête. J’utilise en environnement de dev et prod sur ma machine locale. La route appelée s’occupe d’envoyer 100000 objets dans une base de données sqlite. 
+
+*lire les % de résultats*
 
 Sur un autre projet, j’ai pu demandé une comparaison de l’usage de blackfire lorsqu’on fait un profilage de code par instrumentation.
 Un impact de 30% environ est vu, son impact est donc bien inférieur à n’importe quel autre profiler de part la quantité d’information récolté et son fonctionnement qui est privé.
@@ -540,13 +543,21 @@ level: 1
 
 # Pourquoi profiler en production ?
 
+
+<v-click>
+
 ## Difficulté à être iso
+
+</v-click>
 
 <v-clicks>
 
 - Extensions
+
 - Données
+
 - Variable d'environnement
+
 - Dépendances
 
 </v-clicks>
@@ -562,11 +573,11 @@ Recréer localement l'environnement de production peut-être compliqué car :
 
 ---
 layout: section
-title: Bilan & perspectives d'avenir des profilers après 2024
+title: Perspectives d'avenir des profilers après 2024 & bilan
 level: 1
 ---
 
-# Bilan & perspectives d'avenir des profilers après 2024
+# Perspectives d'avenir des profilers après 2024 & bilan
 
 <v-click>
 
@@ -576,6 +587,7 @@ Sentry & excimer c'est tip top !
 
 
 <!--
+
 L’adoption d’Excimer est grandissante, son intégration à Sentry et sa facilité d’installation le rendant d’autant plus intéressant. Sa compatibilité avec Pyroscope montre aussi la capacité d’export des données tandis OpenTelemetry à ouvert sa spec au profiler depuis mars 2024.
 
 Opentelemetry c’est un ensemble de collection d’api, de sdk et d’outil pour l’intéropabilité au sein de l’observabilité. Il est open source et adopté par de grands acteurs qui existe depuis 2019.
@@ -583,6 +595,20 @@ Opentelemetry c’est un ensemble de collection d’api, de sdk et d’outil pou
 Dans les discussions autour de la spec, Grafana, datadog et d’autres grands acteurs du milieu ont participés à la développer et annonce un futur où l’intéropabilité des outils sera plus grand qu’il ne l’est aujourd’hui et pourrait permettent une plus grande concurrence et une facilité pour les plateformes qui ingère la donnée à utiliser un profiler déjà existant.
 
 C’est un sujet à suivre et un avenir qui se profile .. bien.
+*click*
+Donc Sentry & excimer c'est top ! mais :
+-->
+
+---
+layout: section
+hideInToc: true
+---
+
+# Self hosted != gratuit
+
+<!--
+Le self hosted a un coût : le serveur & la maintenance !
+En revanche si l'on dispose d'un contrat d'infogérance et que la facture Sentry est élevée (elle scale selon le nombre d'appels, erreurs, profiling...) elle demeure plus intéressante.
 -->
 
 ---
