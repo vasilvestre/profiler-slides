@@ -141,6 +141,15 @@ On voit que l’échantillonage est ici de 10ms ce qui permet de voir A, C et D.
 Si vous n'avez pas tous compris, un autre schéma est disponible juste à côté -->
 
 ---
+layout: center
+hideInToc: true
+---
+
+<img src="/catshock.gif" />
+
+<!-- *pause eau* -->
+
+---
 layout: section
 hideInToc: true
 ---
@@ -305,7 +314,7 @@ hideInToc: true
 # L'argent & | l'administratif..
 
 <v-click>
-<img width="300px" src="/cto.png">
+<img width="300px" src="/cto.jpeg">
 </v-click>
 
 <!--
@@ -398,6 +407,15 @@ hideInToc: true
 
 
 <!-- Globalement pour de la production sans avoir de fournir trop d'effort, aucune solution ne supporte gratuitement les call graph. -->
+
+---
+layout: center
+hideInToc: true
+---
+
+<img src="/cat_coffee.gif" />
+
+<!-- *pause eau* -->
 
 ---
 layout: section
