@@ -4,6 +4,8 @@
 
 https://www.notion.so/L-tat-des-profiler-PHP-en-2024-f32d2eefdd1c45ccbc0af5dcfb43becf
 
+https://github.com/vasilvestre/profiler-talk-poc
+
 ## Comment lancer les slides ?
 
 - `npm install`
