@@ -253,9 +253,9 @@ layout: center
 hideInToc: true
 ---
 
-- 1,6 milliard/j
-- 20k/sec
-- 3M de trace par jour
+# 1,6 milliard/j
+# 20k/sec
+# 3M de trace par jour
 
 <!--
 Pour vous partager un petit chiffre cool, voici une stat de wikipedia :
@@ -536,7 +536,7 @@ Un impact de 30% environ est vu, son impact est donc bien inférieur à n’impo
 -->
 
 ---
-layout: default
+layout: center
 title: Mais pourquoi profiler en production ?
 level: 1
 ---
@@ -552,13 +552,13 @@ level: 1
 
 <v-clicks>
 
-- Extensions
+### Extensions
 
-- Données
+### Données
 
-- Variable d'environnement
+### Variable d'environnement
 
-- Dépendances
+### Dépendances
 
 </v-clicks>
 
@@ -581,7 +581,7 @@ level: 1
 
 <v-click>
 
-Sentry & excimer c'est tip top !
+### Sentry & excimer c'est tip top !
 
 </v-click>
 
