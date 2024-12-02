@@ -1,7 +1,7 @@
 ---
 titleTemplate: '%s'
 theme: seriph
-background: https://source.unsplash.com/1920x1080/?developer
+background: https://cover.sli.dev
 highlighter: shiki
 lineNumbers: true
 info: false
